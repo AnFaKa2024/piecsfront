@@ -1,3 +1,5 @@
+"use client"
+
 import QuemSomos from "./QuemSomos";
 
 export default function Somos(){
