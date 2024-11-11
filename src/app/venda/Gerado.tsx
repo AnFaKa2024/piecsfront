@@ -1,0 +1,1 @@
+// Quadro com as informações de quanto gerou de energia e quanto consumiu
