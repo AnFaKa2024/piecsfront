@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Rodape from "@/components/Rodape";
+import {FacultyGlyphic} from '@next/font/google';
+
+const facultyglyphic = FacultyGlyphic({
+  subset:['latin'],
+  weigth: ["400", "500", "600", "700"],
+})
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

@@ -4,14 +4,11 @@ import Image from "next/image"
 import Karen from "../../image/Karen.png"
 import Fernanda from "../../image/Fernanda.png"
 import Emily from "../../image/Emily.png"
-//import {FacultyGlyphic} from '@next/font/google'
+//'
 
 export default function QuemSomos(){
 
-  // const glifo = FacultyGlyphic({
-  //   subset:['estatico'],
-  //   weigth: '400',
-  // })
+  
 
   return(
     

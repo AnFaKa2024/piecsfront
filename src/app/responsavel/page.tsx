@@ -2,7 +2,7 @@
 
 import Usuario from "./usuario";
 
-export default function CadUsuario(){
+export default function Responsavel(){
 
   return(
 
