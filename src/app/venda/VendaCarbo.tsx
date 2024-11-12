@@ -1,29 +1,45 @@
-// trazer as informações quanto CO2 deixou de emitir 
-// quadro com essas informações e mostrar o valor em R$ para venda
+// // trazer as informações quanto CO2 deixou de emitir 
+// // quadro com essas informações e mostrar o valor em R$ para venda
 
+// import { useEffect, useState } from 'react'
 
-export default function VendaCarbo(){
+// export default function VendaCarbo(){
 
-  return(
+//   const VendaCredito = () => {
+//     const [carbonoRecuperado, setCarbonoRecuperado] = useState(0)
+//     const [valorAtual, setValorAtual] = useState(0)
+  
+//     useEffect(() => {
+//       const fetchData = async () => {
+//         try {
+//           const response = await fetch('/api/credito-carbono')
+//           const data = await response.json()
+//           setCarbonoRecuperado(data.carbonoRecuperado)
+//           setValorAtual(data.valorAtual)
+//         } catch (error) {
+//           console.error('Erro ao buscar dados do crédito de carbono:', error)
+//         }
+//       }
+//       fetchData()
+//     }, [])
+//   }
+
+//   return(
     
-    
-        <section className="bg-medium-gray py-8 px-4">
-          <h2 className="text-deep-green text-xl font-semibold mb-4">Marketplace de Energia</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-4 bg-white rounded shadow">
-              <h3 className="text-accent-blue font-medium">Venda de Energia</h3>
-              <p className="text-green-900">200 kWh disponíveis</p>
-              <button className="mt-2 px-4 py-2 bg-deep-green text-white rounded">Comprar</button>
-            </div>
-            <div className="p-4 bg-white rounded shadow">
-              <h3 className="text-blue-950 font-medium">Compra de Energia</h3>
-              <p className="text-green-950">150 kWh solicitados</p>
-              <button className="mt-2 px-4 py-2 bg-greentext-green-950 text-white rounded">Vender</button>
-            </div>
-          </div>
-        </section>
-    
-    
-      
-  )
-}
+//     <div className="p-8 bg-gray-100 min-h-screen flex flex-col items-center">
+//       <h1 className="text-3xl font-bold mb-8">Venda de Crédito de Carbono</h1>
+
+//       <div className="w-full md:w-1/2 bg-white shadow-lg rounded-lg p-6 text-center">
+//         <h2 className="text-xl font-semibold mb-4">Carbono Recuperado</h2>
+//         <p className="text-2xl text-green-600 font-bold">{carbonoRecuperado} kg</p>
+
+//         <h2 className="text-xl font-semibold mt-8 mb-4">Valor Atual do Crédito</h2>
+//         <p className="text-2xl text-blue-600 font-bold">R$ {valorAtual.toFixed(2)}</p>
+
+//         <button className="mt-8 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+//           Vender Crédito
+//         </button>
+//       </div>
+//     </div>   
+//   )
+// }

@@ -22,7 +22,7 @@ export default function Usuario(){
   }
 
   return(
-    <main className="p-4 mt-3 gap-4">
+    <main className="overflow-full bg-green-600">
     <h1 className="text-center text-5xl font-bold">
       CADASTRAR NOVA MICROREGIÃO DE ENERGIA
     </h1>
@@ -36,18 +36,30 @@ export default function Usuario(){
 
         <fieldset className="border p-4 rounded-md">
           <legend className="text-2xl font-semibold">Dados do Responsável</legend>
+          
+          <div className="grid grid-cols-2 gap-4 mt-4">
 
-          <label htmlFor="nome" className="block text-lg font-medium mt-2">Nome Completo</label>
-          <input type="text" id="nome" placeholder="Nome Completo" className="w-full p-2 border rounded-md" />
+            <div>
+              <label htmlFor="nome" className="block text-lg font-medium mt-2">Nome Completo</label>
+              <input type="text" id="nome" placeholder="Nome Completo" className="w-3/6 p-2 border rounded-md" />
+            </div>
+            
+            <div>
+              <label htmlFor="dataNascimento" className="block text-lg font-medium mt-2">Data de Nascimento</label>
+              <input type="date" id="dataNascimento" className="w-44 p-2 border rounded-md" />
+            </div>
 
-          <label htmlFor="dataNascimento" className="block text-lg font-medium mt-2">Data de Nascimento</label>
-          <input type="date" id="dataNascimento" className="w-full p-2 border rounded-md" />
+            <div>
+              <label htmlFor="cpfCnpj" className="block text-lg font-medium mt-2">CPF ou CNPJ</label>
+              <input type="text" id="cpfCnpj" className="w-96 p-2 border rounded-md" />
+            </div>
 
-          <label htmlFor="cpfCnpj" className="block text-lg font-medium mt-2">CPF ou CNPJ</label>
-          <input type="text" id="cpfCnpj" className="w-full p-2 border rounded-md" />
+            <div>
+              <label htmlFor="email" className="block text-lg font-medium mt-2">E-mail</label>
+              <input type="email" id="email" placeholder="E-mail" className="w-96 p-2 border rounded-md" />
+            </div>
 
-          <label htmlFor="email" className="block text-lg font-medium mt-2">E-mail</label>
-          <input type="email" id="email" placeholder="E-mail" className="w-full p-2 border rounded-md" />
+          </div>
         </fieldset>
 
         <fieldset className="border p-4 rounded-md">
@@ -56,7 +68,13 @@ export default function Usuario(){
           <label htmlFor="rua" className="block text-lg font-medium mt-2">Rua</label>
           <input type="text" id="rua" placeholder="Rua" className="w-full p-2 border rounded-md" />
 
+          <label htmlFor="numero" className="block text-lg font-medium mt-2">Número</label>
+          <input type="text" id="rua" placeholder="Rua" className="w-full p-2 border rounded-md" />
+
           <label htmlFor="bairro" className="block text-lg font-medium mt-2">Bairro</label>
+          <input type="text" id="bairro" placeholder="Bairro" className="w-full p-2 border rounded-md" />
+
+          <label htmlFor="cep" className="block text-lg font-medium mt-2">CEP</label>
           <input type="text" id="bairro" placeholder="Bairro" className="w-full p-2 border rounded-md" />
 
           <label htmlFor="cidade" className="block text-lg font-medium mt-2">Cidade</label>
@@ -65,7 +83,34 @@ export default function Usuario(){
           <label htmlFor="estado" className="block text-lg font-medium mt-2">Estado</label>
           <select id="estado" className="w-full p-2 border rounded-md">
             <option value="">Selecione o Estado</option>
-            {/* Adicione as opções de estados */}
+            <option>AC</option>
+            <option>AL</option>
+            <option>AP</option>
+            <option>AM</option>
+            <option>BA</option>
+            <option>CE</option>
+            <option>DF</option>
+            <option>ES</option>
+            <option>GO</option>
+            <option>MA</option>
+            <option>MT</option>
+            <option>MS</option>
+            <option>MG</option>
+            <option>PA</option>
+            <option>PB</option>
+            <option>PR</option>
+            <option>PE</option>
+            <option>PI</option>
+            <option>RJ</option>
+            <option>RN</option>
+            <option>RS</option>
+            <option>RO</option>
+            <option>RR</option>
+            <option>SC</option>
+            <option>SP</option>
+            <option>SE</option>
+            <option>TO</option>
+            
           </select>
         </fieldset>
 
@@ -83,8 +128,6 @@ export default function Usuario(){
           <label htmlFor="bairroInstalacao" className="block text-lg font-medium mt-2">Bairro</label>
             <input type="text" id="bairroInstalacao" placeholder="Bairro" className="w-full p-2 border rounded-md" />
 
-          <label htmlFor="area" className="block text-lg font-medium mt-2">Qual a metragem da área disponível para a instalação?</label>
-            <input type="number" id="area" placeholder="Metragem da Área" className="w-full p-2 border rounded-md" /> m²
 
           <label htmlFor="equipamento" className="block text-lg font-medium mt-2">Qual Equipamento mais Adequado?</label>
             <select id="equipamento" className="w-full p-2 border rounded-md" value={equipamento} onChange={handleEquipamentoChange}>
@@ -93,19 +136,16 @@ export default function Usuario(){
               <option value="eolica">Eólica</option>
             </select>
 
+          <label htmlFor="area" className="block text-lg font-medium mt-2">Qual a metragem da área disponível para a instalação?</label>
+            <input type="number" id="area" placeholder="Metragem da Área" className="w-full p-2 border rounded-md" /> m²
+          
           {equipamento && (
             <div>
               <label htmlFor="localInstalacao" className="block text-lg font-medium mt-2">
                 Qual o local para instalação?
               </label>
-              <select 
-                id="localInstalacao" 
-                className="w-full p-2 border rounded-md" 
-                onChange={handleLocalChange} 
-                multiple
-                value={locaisSelecionados}
-              >
-                {equipamento === 'solar' ? (
+              <select id="localInstalacao" className="w-full p-2 border rounded-md" onChange={handleLocalChange} multiple value={locaisSelecionados}>
+                {equipamento === 'fotovoltaica' ? (
                   <>
                     <option value="telhado">Telhado das Residências</option>
                     <option value="estacionamento">Cobertura das Vagas do Estacionamento</option>
@@ -127,14 +167,7 @@ export default function Usuario(){
               </select>
 
               {locaisSelecionados.includes("outro") && (
-                <input 
-                  type="text" 
-                  placeholder="Especifique o Local" 
-                  className="w-full p-2 border rounded-md mt-2" 
-                  value={outroLocal} 
-                  onChange={(e) => setOutroLocal(e.target.value)}
-                />
-              )}
+                <input type="text" placeholder="Especifique o Local" className="w-full p-2 border rounded-md mt-2" value={outroLocal} onChange={(e) => setOutroLocal(e.target.value)}/>)}
             </div>
           )}
         </fieldset> 

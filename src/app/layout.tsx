@@ -2,12 +2,18 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Rodape from "@/components/Rodape";
-import {FacultyGlyphic} from '@next/font/google';
 
-const facultyglyphic = FacultyGlyphic({
-  subset:['latin'],
-  weigth: ["400", "500", "600", "700"],
-})
+
+// const facultyGlyphic = localFont({
+//   src: [
+//     {
+//       path: './app/fonts/Faculty_Glyphic.woff2',
+//       weight: '400',
+//       style: 'normal',
+//     }
+//   ],
+//   variable: '--font-faculty-glyphic',
+// });
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,6 +41,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        
         {children}
         <Rodape/>
       </body>
