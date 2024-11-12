@@ -4,7 +4,7 @@ import Image from "next/image"
 import Karen from "../../image/Karen.png"
 import Fernanda from "../../image/Fernanda.png"
 import Emily from "../../image/Emily.png"
-//'
+
 
 export default function QuemSomos(){
 
@@ -28,8 +28,11 @@ export default function QuemSomos(){
           <Image src={Fernanda} alt="Fernanda"></Image>
             <div className="text-center text-xl">
               <p><b>Turma: 1TDSPI</b></p>
-              <p>Fernanda Budniak de Seda</p>
+              <h2>Fernanda Budniak de Seda</h2>
               <p>RM - 558274</p>
+              <h3>Contatos e Trabalhos Realizados </h3>
+              <p>GitHub: https://github.com/Febudniak</p>
+              <p>Linkdin: https://www.linkedin.com/in/fernanda-budniak-de-seda-4022382b6/ </p>
             </div>
         </div>
 
@@ -37,8 +40,11 @@ export default function QuemSomos(){
           <Image src={Karen} alt="Karen"></Image>
             <div className="text-center text-xl">
               <p><b>Turma: 1TDSPI</b></p>
-              <p>Karen Marques dos Santos</p>
+              <h2>Karen Marques dos Santos</h2>
               <p>RM - 554556</p>
+              <h3>Contatos e Trabalhos Realizados </h3>
+              <p>GitHub: https://github.com/AstorBia</p>
+              <p>Linkdin: https://www.linkedin.com/in/karen-marques-tech-dev </p>
             </div>
         </div>
         
@@ -46,8 +52,12 @@ export default function QuemSomos(){
           <Image src={Emily} alt="Emily"></Image>
             <div className="text-center text-xl">
               <p><b>Turma: 1TDSPG</b></p>
-              <p>Emily Maria de Oliveira Macedo</p>
+              <h2>Emily Maria de Oliveira Macedo</h2>
               <p>RM - 554882</p>
+              <h3>Contatos e Trabalhos Realizados</h3>
+              <p>GitHub: https://github.com/Emily27289</p>
+              <p>Linkdin: https://www.linkedin.com/in/emily-macedo-5a9474329/ </p>
+              
             </div>
         </div>
         

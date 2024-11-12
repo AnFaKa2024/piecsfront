@@ -1,0 +1,11 @@
+como colocar cor de fundo?
+ver como colocar os gráficos
+entender como usar o @apply
+adc as PROPS
+
+como alterar a largura da página
+
+verificar por que a page do EXTERNO não aceita outra tag
+
+
+pq a page MOSTRADOR não está funcionando

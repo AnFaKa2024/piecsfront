@@ -1,30 +1,12 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import {Faculty_Glyphic} from 'next/font/google'
 import "./globals.css";
 import Rodape from "@/components/Rodape";
 
-
-// const facultyGlyphic = localFont({
-//   src: [
-//     {
-//       path: './app/fonts/Faculty_Glyphic.woff2',
-//       weight: '400',
-//       style: 'normal',
-//     }
-//   ],
-//   variable: '--font-faculty-glyphic',
-// });
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const faculty = Faculty_Glyphic({
+  subsets: ["latin"],
+  weight:["400"]
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -38,9 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body 
+        className={`${faculty.className}`}
+      >   
         
         {children}
         <Rodape/>
