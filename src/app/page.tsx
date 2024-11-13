@@ -1,23 +1,18 @@
 "use client"
 
-import CabecalhoInicial from "@/components/CabecalhoInicial";
 
-import CabecalhoInterno from "@/components/CabecalhoInterno";
+import Home from "./Home/page"
 
 
-export default function Home() {
-  return (
-    <>
-      <CabecalhoInicial/>
+
+export default function PrimeiroAcesso(){
+  return(
+
+    <main className="grow flex flex-col gap-10 justify-center items-center">
+   
       
-      
-      <main className="bg-slate-300 flex grow">
-        <h1>Plataforma Integrada de Energia Comunitária e Sustentável - PIECS</h1>
-
-
-
-
-      </main>
-    </>
+      <Home/>
+     
+    </main>
   )
 }

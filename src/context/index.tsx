@@ -1,10 +1,7 @@
 "use client"
 import { createContext, useContext, useState } from "react";
+import { UserProps } from "@/types";
 
-export type UserProps = {
-    nome: string;
-    senha:string;
-}
 
 type AuthContextProps = {
     user: UserProps | null;
@@ -18,7 +15,8 @@ const AuthProvider = ({children}:{children:React.ReactNode})=>{
 
     const [user, setUser] = useState<UserProps>({
         nome: '',
-        senha: ''
+        senha: '',
+        tipo: ''
     })
  
     const login = (user: UserProps)=>{
@@ -26,7 +24,7 @@ const AuthProvider = ({children}:{children:React.ReactNode})=>{
     }
 
     const logout = ()=>{
-        setUser({nome:'',senha:''})        
+        setUser({nome:'',senha:'', tipo:''})        
     }
 
     return(
@@ -38,9 +36,3 @@ const AuthProvider = ({children}:{children:React.ReactNode})=>{
 
 export {AuthProvider, AuthContext}
 
-//Outra Opção, criando o hook
-const useAuth = ()=>{
-    const context = useContext(AuthContext)
-    return context
-}
-export {useAuth}

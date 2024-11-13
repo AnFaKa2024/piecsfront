@@ -1,21 +1,21 @@
-// é a página principal INTERNA
+"use client"
 
-import CabecalhoInicial from "@/components/CabecalhoInicial";
-import CabecalhoInterno from "@/components/CabecalhoInterno";
+
+
+import CabecalhoInicial from "@/components/CabecalhoInicial"
+import Detalhes from "./Detalhes"
+import PaginaExterna from "./PaginaExterna"
 
 export default function Home(){
 
   return(
+    
     <>
     
     <CabecalhoInicial/>
-
-    <main>
-
-
-
-
-    </main>
+    <PaginaExterna/>
+    <Detalhes/>
     </>
+    
   )
 }

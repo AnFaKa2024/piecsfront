@@ -11,6 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'primaria': '#D7D8D3', //fundo
+        'claro':'#DBDBD9', // texto claro
+        'padrao': '#24343C', // texto
+        'linha': '#003339', //bordas
+        'faixa': '#64979D', // faixa rodape
       },
     },
   },
