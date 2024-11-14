@@ -12,7 +12,7 @@ export default function QuemSomos(){
 
   return(
     
-    <main className="flex-grow p-2 mt-2">
+    <main className="grow text-padrao p-8">
       <h1 className="text-center font-bold text-5xl gap-2">Quem Somos</h1>
       <article className="text-justify text-2xl mt-16">
         <p className="leading-10 indent-11">Somos três alunas dedicadas do curso de Análise e Desenvolvimento de Sistemas, 
@@ -24,41 +24,59 @@ export default function QuemSomos(){
       <section className="grid grid-cols-3 justify-evenly p-4 mt-4">
         
         
-        <div>
-          <Image src={Fernanda} alt="Fernanda"></Image>
-            <div className="text-center text-xl">
-              <p><b>Turma: 1TDSPI</b></p>
-              <h2>Fernanda Budniak de Seda</h2>
-              <p>RM - 558274</p>
+        <div className="p-6 max-w-sm mx-auto border border-linha rounded-xl shadow-md space-y-4">
+          <div className="text-center">
+            <Image src={Fernanda} alt="Fernanda"></Image>
+          </div>
+
+          <div className="text-center text-xl">
+            <p><b>Turma: 1TDSPI</b></p>
+            <h2>Fernanda Budniak de Seda</h2>
+            <p>RM - 558274</p>
+          </div>
+
+          <div className="bg-claro hover:bg-white p-4 border border-linha rounded-lg text-center space-y-2">
               <h3>Contatos e Trabalhos Realizados </h3>
               <p>GitHub: https://github.com/Febudniak</p>
               <p>Linkdin: https://www.linkedin.com/in/fernanda-budniak-de-seda-4022382b6/ </p>
-            </div>
+          </div>
         </div>
 
-        <div>
-          <Image src={Karen} alt="Karen"></Image>
-            <div className="text-center text-xl">
-              <p><b>Turma: 1TDSPI</b></p>
-              <h2>Karen Marques dos Santos</h2>
-              <p>RM - 554556</p>
+        <div className="p-6 max-w-sm mx-auto border border-linha rounded-xl shadow-md space-y-4">
+          <div className="text-center">
+            <Image src={Karen} alt="Karen"></Image>
+          </div>
+
+          <div className="text-center text-xl">
+            <p><b>Turma: 1TDSPI</b></p>
+            <h2>Karen Marques dos Santos</h2>
+            <p>RM - 554556</p>
+          </div>
+
+          <div className="bg-claro hover:bg-white p-4 border border-linha rounded-lg text-center space-y-2">
               <h3>Contatos e Trabalhos Realizados </h3>
               <p>GitHub: https://github.com/AstorBia</p>
               <p>Linkdin: https://www.linkedin.com/in/karen-marques-tech-dev </p>
-            </div>
+          </div>
         </div>
         
-        <div>
-          <Image src={Emily} alt="Emily"></Image>
-            <div className="text-center text-xl">
-              <p><b>Turma: 1TDSPG</b></p>
-              <h2>Emily Maria de Oliveira Macedo</h2>
-              <p>RM - 554882</p>
+        <div className="p-6 max-w-sm mx-auto border border-linha rounded-3xl shadow-md space-y-4">
+          <div className="text-center">
+            <Image src={Emily} alt="Emily"></Image>
+          </div>
+          
+          <div className="text-center text-xl">
+            <p><b>Turma: 1TDSPG</b></p>
+            <h2>Emily Maria de Oliveira Macedo</h2>
+            <p>RM - 554882</p>
+          </div>
+
+          <div className="bg-claro hover:bg-white p-4 border border-linha rounded-lg text-center space-y-2">
               <h3>Contatos e Trabalhos Realizados</h3>
               <p>GitHub: https://github.com/Emily27289</p>
               <p>Linkdin: https://www.linkedin.com/in/emily-macedo-5a9474329/ </p>
               
-            </div>
+          </div>
         </div>
         
         
