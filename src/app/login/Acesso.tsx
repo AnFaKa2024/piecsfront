@@ -1,11 +1,11 @@
-//import { useAuth } from "@/context"
-import Link from "next/link"
+import { useAuth } from "@/context"
+
 import { FormEvent, useState } from "react"
 import { FaUser, FaLock } from "react-icons/fa"
 import { FiLogIn, FiLogOut } from 'react-icons/fi'
 
 export default function Acesso() {
-  //const { user, login, logout } = useAuth();
+  const { user, login, logout } = useAuth();
 
   const [dados, setDados] = useState({ nome: '', senha: '', tipo: '' });
 
@@ -52,6 +52,13 @@ export default function Acesso() {
             <option value="BENEFICIÁRIO">Beneficiário</option>
           </select>
         </div>
+
+        <button type="submit" className="w-full mt-6 p-2 bg-indigo-900 text-white font-semibold rounded-md flex items-center justify-center">
+          <FiLogIn className="mr-2" /> Acessar </button>
+        
+        {user && user.nome && (
+          <button type="button" onClick={logout} className="w-full mt-4 p-2 bg-red-600 text-white font-semibold rounded-md flex items-center justify-center">
+            <FiLogOut className="mr-2" /> Sair </button>)}
 
       </form>
 

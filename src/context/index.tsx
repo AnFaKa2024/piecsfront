@@ -13,18 +13,16 @@ const AuthContext = createContext<AuthContextProps>({} as AuthContextProps)
 
 const AuthProvider = ({children}:{children:React.ReactNode})=>{
 
-    const [user, setUser] = useState<UserProps>({
-        nome: '',
-        senha: '',
-        tipo: ''
-    })
+    const [user, setUser] = useState<UserProps | null>(null);
  
     const login = (user: UserProps)=>{
-        setUser(user)
+        setUser(user);
+        localStorage.setItem('@Auth:user', JSON.stringify(user));
     }
 
     const logout = ()=>{
-        setUser({nome:'',senha:'', tipo:''})        
+        setUser(null);
+        localStorage.removeItem('@Auth:user');
     }
 
     return(
@@ -35,4 +33,13 @@ const AuthProvider = ({children}:{children:React.ReactNode})=>{
 }
 
 export {AuthProvider, AuthContext}
+
+
+export const useAuth = () => {
+    const context = useContext(AuthContext);
+    if (!context) {
+        throw new Error('useAuth deve ser usado dentro de um AuthProvider');
+    }
+    return context;
+};
 
