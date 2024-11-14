@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import logo from "../image/logoSemFundo.png"
 import perfilEd2 from '../image/perfilEd2.png'
+import { FiLogOut } from 'react-icons/fi'
 
 export default function CabecalhoInicial(){
 
@@ -33,7 +34,8 @@ export default function CabecalhoInicial(){
             </Link>
         
           </div>
-      
+      {/* Por esse link o usuário tem a opção de sair do PIECS */}
+      <Link href="/logout" aria-label="Sair" className="flex flex-col items-center text-claro text-2xl hover:text-indigo-950"><FiLogOut />Sair do PIECS</Link>
     </header>
 
   )
