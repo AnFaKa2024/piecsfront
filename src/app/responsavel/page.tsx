@@ -1,22 +1,26 @@
 "use client"
 
+import CabecalhoInicial from "@/components/CabecalhoInicial";
 import Usuario from "./usuario";
+import Cabecalho from "../login/Cabecalho";
 
-import { UserProps } from "@/types";
+//import { UserProps } from "@/types";
 
 export default function Responsavel(){
 
-  const {reponsavel} = useAuth()
+  // const {reponsavel} = useAuth()
 
    
 
-  if(responsavel?.nome == ""){
-    alert("Para fazer gerenciar a microregião, faça antes o login")
-    redirect('/')    
-  }
+  // if(responsavel?.nome == ""){
+  //   alert("Para fazer gerenciar a microregião, faça antes o login")
+  //   redirect('/')    
+  // }
 
   return(
-    
+    <>
+    <Cabecalho/>
     <Usuario/>
+    </>
   )
 }

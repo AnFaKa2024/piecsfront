@@ -1,11 +1,11 @@
-import { useAuth } from "@/context"
+//import { useAuth } from "@/context"
 import Link from "next/link"
 import { FormEvent, useState } from "react"
 import { FaUser, FaLock } from "react-icons/fa"
 import { FiLogIn, FiLogOut } from 'react-icons/fi'
 
 export default function Acesso() {
-  const { user, login, logout } = useAuth();
+  //const { user, login, logout } = useAuth();
 
   const [dados, setDados] = useState({ nome: '', senha: '', tipo: '' });
 

@@ -16,6 +16,8 @@ export default {
         'padrao': '#24343C', // texto
         'linha': '#003339', //bordas
         'faixa': '#64979D', // faixa rodape
+        'carrossel': '#1D2B34',//carrossel
+        
       },
     },
   },

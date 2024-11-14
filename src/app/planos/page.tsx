@@ -2,6 +2,8 @@
 
 import CabecalhoInicial from "@/components/CabecalhoInicial"
 import Assinaturas from "./Assinaturas"
+import Carrossel from "./carrossel"
+import Orcamento from "./orcamento"
 
 export default function Planos(){
 
@@ -9,6 +11,8 @@ export default function Planos(){
     <>
     <CabecalhoInicial/>
     <Assinaturas/>
+    <Carrossel/>
+    <Orcamento/>
     </>
   )
 }

@@ -1,7 +1,8 @@
 "use client"
 
-
-import Home from "./Home/page"
+import CabecalhoInicial from "@/components/CabecalhoInicial"
+import PaginaExterna from "./Home/PaginaExterna"
+import Detalhes from "./Home/Detalhes"
 
 
 
@@ -11,7 +12,9 @@ export default function PrimeiroAcesso(){
     <main className="grow flex flex-col gap-10 justify-center items-center">
    
       
-      <Home/>
+    <CabecalhoInicial/>
+    <PaginaExterna/>
+    <Detalhes/>
      
     </main>
   )

@@ -41,7 +41,7 @@ export default function PaginaExterna(){
            impacto nas esferas ambiental, social e econômica.</p>
 
         <h2 className="text-center text-3xl font-semibold">Alguns Artigos técnicos e Trabalhos Científicos</h2>
-
+        <p className="text-center mt-4 text-linha underline">Clique nos Títulos dos artigos para saber mais!!</p>
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
 
         <article className="bg-white border-l-4 border-padrao hover:bg-yellow-300 p-6 shadow-lg rounded-lg hover:scale-105 transition-transform">
