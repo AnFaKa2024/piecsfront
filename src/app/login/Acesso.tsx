@@ -1,8 +1,9 @@
 import { useAuth } from "@/context"
-
 import { FormEvent, useState } from "react"
 import { FaUser, FaLock } from "react-icons/fa"
 import { FiLogIn, FiLogOut } from 'react-icons/fi'
+import Image from "next/image"
+import log from '../../image/login.jpg'
 
 export default function Acesso() {
   const { user, login, logout } = useAuth();
@@ -28,6 +29,7 @@ export default function Acesso() {
   return (
     <div className="flex flex-col justify-center items-center p-10 bg-gray-100 ">
      
+     <Image src={log} alt="login" className="w-3/6"></Image>
 
       <h1 className="text-3xl font-black mt-14 mb-24 text-indigo-900">Acesso PIECS</h1>
       <form className="w-96 border border-indigo-950 p-6 bg-white rounded-lg shadow-md" onSubmit={handleSubmit}>
