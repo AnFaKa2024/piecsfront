@@ -13,13 +13,9 @@ export type MembroEquipe = {
   linkedin: string;
 }
 
-export type PlanosProps = {
-  titulo: string;
-  descricao: string;
-}
 
 export type OrcProps = {
-  onSubmit: any;
-  chatbotOpen: any;
-  toggleChat: any;
+  onSubmit: string;
+  chatbotOpen: string;
+ 
 }

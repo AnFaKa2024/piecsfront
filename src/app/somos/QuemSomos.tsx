@@ -7,8 +7,6 @@ import Fernanda from "../../image/Fernanda.png"
 import Emily from "../../image/Emily.png"
 
 
-
-
 export default function QuemSomos(){
   const membros: MembroEquipe[] = [
     {

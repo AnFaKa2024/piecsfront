@@ -2,7 +2,7 @@ import { OrcProps } from '@/types'
 import { useState } from 'react'
 import { FaPaperPlane } from 'react-icons/fa'
 
-export default function Orcamento({ onSubmit, chatbotOpen, toggleChat }: OrcProps) {
+export default function Orcamento({ onSubmit, chatbotOpen }: OrcProps) {
   const [isChatOpen, setIsChatOpen] = useState(chatbotOpen || false)
 
   const handleSubmit = (e)=> {e.preventDefault()

@@ -5,8 +5,6 @@ import { FiLogIn, FiLogOut} from 'react-icons/fi'
 
 export default function Cabecalho(){
  
-  const IconeEntrar = () => <FiLogIn size={20} />
- 
   return(
     <header className="text-claro bg-faixa font-bold text-xl p-4 w-full">
     

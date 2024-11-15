@@ -1,6 +1,5 @@
 "use client"
 
-import CabecalhoInicial from "@/components/CabecalhoInicial";
 import Usuario from "./usuario";
 import Cabecalho from "../login/Cabecalho";
 

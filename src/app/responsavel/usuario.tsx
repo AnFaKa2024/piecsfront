@@ -1,41 +1,19 @@
 // cadastro do usuário - responável pela microregiao
-import { useState, ChangeEvent } from 'react'
-import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
+import { useState} from 'react'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
-
 
 
 export default function Usuario(){
 
 
- 
-  const [equipamento, setEquipamento] = useState<string>("")
-  const [localInstalacao, setLocalInstalacao] = useState<string>("")
-  const [outroLocal, setOutroLocal] = useState<string>("")
-  const [locaisSelecionados, setLocaisSelecionados] = useState<string[]>([])
-
   const [beneficiarios, setBeneficiarios] = useState([{nome:'', email:''}])
   const adicionarBeneficiario = ()=>{
     setBeneficiarios([...beneficiarios,{nome:'', email:''}])
   }
+  
 
-  const handleEquipamentoChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    console.log(e.target.value)
-    setEquipamento(e.target.value)
-    setLocalInstalacao("") 
-    setLocaisSelecionados([])
-  }
+  const [showPassword] = useState(false);
 
-  const handleLocalChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    const selectedOptions = Array.from(e.target.selectedOptions).map(option => option.value);
-    setLocaisSelecionados(selectedOptions);
-  }
-
-  const [showPassword, setShowPassword] = useState(false);
-
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  }
 
   return(
     <main className="overflow-full bg-primaria">

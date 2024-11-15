@@ -1,6 +1,5 @@
 
-import { PlanosProps } from '@/types'
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import manut from '../../image/manut.jpg'
 import manut2 from '../../image/manut2.jpg'
@@ -12,18 +11,15 @@ import manutBat from "../../image/manutBat.jpg"
 
 
 
-export default function Assinaturas({titulo, descricao}:PlanosProps) {
-
-  titulo = 'Conheça Nossos Planos de Locações',
-  descricao = 'Os planos de locação são diversificados e fica totalmente a critério do cliente, podendo ser locação apenas das placas fotovoltaicas ou turbinas eólicas, como apenas das baterias.'
+export default function Assinaturas() {
 
   return (
     
     <main className="bg-primaria text-gray-800 min-h-screen px-4">
       
-      <h1 className='text-center text-3xl md:text-5xl text-linha py-8'>{titulo}</h1>
+      <h1 className='text-center text-3xl md:text-5xl text-linha py-8'>Conheça Nossos Planos de Locações</h1>
 
-      {descricao && <p className="text-center text-2xl text-linha mb-8">{descricao}</p>}
+      <p className="text-center text-2xl text-linha mb-8">Os planos de locação são diversificados e fica totalmente a critério do cliente, podendo ser locação apenas das placas fotovoltaicas ou turbinas eólicas, como apenas das baterias.</p>
      
         
       <div className="space-y-4">
