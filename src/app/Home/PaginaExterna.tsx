@@ -53,9 +53,9 @@ export default function PaginaExterna(){
             <p className="text-justify leading-10 mb-10 text-padrao text-lg">A energia renovável, especialmente a energia eólica, está se expandindo rapidamente na Suécia e em outros
              lugares e deixou o nicho para se tornar parte do regime sociotécnico de energia convencional.
               No entanto, a inovação social da energia eólica de propriedade da comunidade não está se expandindo 
-              paralelamente. Apesar de seu potencial para uma transição energética inclusiva e para aliviar conflitos, a energia comunitária continua sendo um fenômeno de nicho. Neste artigo, exploramos as condições para a expansão da energia da comunidade. O upscaling às vezes é considerado estranho ao espírito da energia comunitária, mas argumentamos que pode ser positivo e, assumindo a existência de uma "armadilha de energia eólica comunitária" - aumento da concorrência no mercado e diminuição do apoio governamental - até mesmo necessário para a sobrevivência a longo prazo da energia eólica comunitária. Estudamos particularmente como duas variáveis se relacionam
+              paralelamente. Apesar de seu potencial para uma transição energética inclusiva e para aliviar conflitos, a energia comunitária continua sendo um fenômeno de nicho. Neste artigo, exploramos as condições para a expansão da energia da comunidade. O upscaling às vezes é considerado estranho ao espírito da energia comunitária, mas argumentamos que pode ser positivo e, assumindo a existência de uma `armadilha de energia eólica comunitária` - aumento da concorrência no mercado e diminuição do apoio governamental - até mesmo necessário para a sobrevivência a longo prazo da energia eólica comunitária. Estudamos particularmente como duas variáveis se relacionam
              com o upscaling: autonomia e comunidade, esta última dividida em comunidades de interesse e lugar.</p>
-            <br />           
+                       
             
             <Image src={escalonamento1} alt="quadro4" className="my-4"></Image>
             
