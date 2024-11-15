@@ -6,13 +6,17 @@ import Carrossel from "./carrossel"
 import Orcamento from "./orcamento"
 
 export default function Planos(){
+  const handleSubmit = () => {
+  }
+
+  const isChatbotOpen = true; 
 
   return(
     <>
     <CabecalhoInicial/>
     <Assinaturas/>
     <Carrossel/>
-    <Orcamento/>
+    <Orcamento onSubmit={handleSubmit} chatbotOpen={isChatbotOpen}/>
     </>
   )
 }

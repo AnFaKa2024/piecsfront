@@ -5,7 +5,7 @@ import Rodape from "@/components/Rodape";
 
 const faculty = Faculty_Glyphic({
   subsets: ["latin"],
-  weight:["400"]
+  weight:["400"],
 })
 
 export const metadata: Metadata = {

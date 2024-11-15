@@ -6,16 +6,9 @@ body{
   @apply bg-primaria flex flex-col min-h-screen
 }
 
-
-
-/* .bg-fundo{
-  @apply bg-primaria-200;
+body{
+  font-family: 'Faculty Glyphic', Arial, sans-serif
 }
 
-.text-texto{
-  @apply text-padrao-200;
-}
 
-.border-borda{
-  @apply border-linha-200;
-} */
+
