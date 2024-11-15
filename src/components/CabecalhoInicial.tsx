@@ -20,10 +20,10 @@ export default function CabecalhoInicial(){
           
             <nav className="flex-1 text-center space-x-4">
               <Link href="/" className="text-xl px-4 hover:text-yellow-500">PIECS</Link>
-              <Link href="/" className="text-xl px-4 hover:text-yellow-500">Quem Somos</Link>
-              <Link href="/" className="text-xl px-4 hover:text-yellow-500">Fontes de Energia</Link>
-              <Link href="/" className="text-xl px-4 hover:text-yellow-500">Baterias</Link>
-              <Link href="/" className="text-xl px-4 hover:text-yellow-500">Planos de Assinaturas</Link>
+              <Link href="/somos" className="text-xl px-4 hover:text-yellow-500">Quem Somos</Link>
+              <Link href="/fontes" className="text-xl px-4 hover:text-yellow-500">Fontes de Energia</Link>
+              <Link href="/bateria" className="text-xl px-4 hover:text-yellow-500">Baterias</Link>
+              <Link href="/planos" className="text-xl px-4 hover:text-yellow-500">Planos de Assinaturas</Link>
             </nav>
           
 
@@ -35,7 +35,7 @@ export default function CabecalhoInicial(){
         
           </div>
       {/* Por esse link o usuário tem a opção de sair do PIECS */}
-      <Link href="/logout" aria-label="Sair" className="flex flex-col items-center text-claro text-2xl hover:text-indigo-950"><FiLogOut />Sair do PIECS</Link>
+      <Link href="/" aria-label="Sair" className="flex flex-col items-center text-claro text-2xl hover:text-indigo-950"><FiLogOut />Sair do PIECS</Link>
     </header>
 
   )

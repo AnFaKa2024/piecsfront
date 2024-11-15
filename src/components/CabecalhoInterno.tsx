@@ -14,9 +14,8 @@ export default function CabecalhoInterno(){
        
         <nav className="flex-1 text-center space-x-4">
           {/* Aqui o Home - é para voltar de volta para a página INTERNA */}
-          <Link href="/" className="hover:text-yellow-500 text-2xl px-4">Home</Link>
-          <Link href="/" className="hover:text-yellow-500 text-2xl px-4">Métricas de Energia</Link>
-          <Link href="/" className="hover:text-yellow-500 text-2xl px-4">Baterias</Link>
+          <Link href="/" className="hover:text-yellow-500 text-2xl px-4">PIECS</Link>
+          
         </nav>
         
         {/* Por esse link o usuário tem a opção de sair do PIECS */}

@@ -17,7 +17,7 @@ export default function Cabecalho(){
           {/* esse link precisa ir para a Página externa */}
           <Link href={'/'} className="text-deep-green text-2xl hover:text-yellow-500 font-semibold">PIECS</Link> 
         
-          <Link href="/login" className="flex items-center space-x-2 hover:text-yellow-500 text-2xl font-semibold"> <FiLogIn size={20} />Entrar</Link>
+          <Link href="/homeInterna" className="flex items-center space-x-2 hover:text-yellow-500 text-2xl font-semibold"> <FiLogIn size={20} />Entrar</Link>
           </div>        
       
         </div>
