@@ -60,8 +60,7 @@ export default function PaginaExterna(){
             <Image src={escalonamento1} alt="quadro4" className="my-4"></Image>
             
             <p className="text-center font-semibold text-sm"><strong>Para mais informações acesse o link abaixo</strong></p>
-            <a href='https://energsustainsoc.biomedcentral.com/articles/10.1186/s13705-023-00411-6' className="text-center font-semibold text-sm text-blue-500 underline">
-            Fonte: energsustainsoc.biomedcentral.com</a>
+            <p className="text-center font-semibold text-sm text-blue-900 underline"> Fonte: energsustainsoc.biomedcentral.com</p> 
             
             </div>
             )}
@@ -87,8 +86,7 @@ export default function PaginaExterna(){
             
             <Image src={grafico} alt="grafico" className="my-4"></Image>
             <p className="text-justify leading-10 mb-10 text-padrao hover:bg-yellow-300 text-lg"><strong>Para mais informações acesse o link abaixo</strong></p>
-            <a href='https://www.nrel.gov/docs/fy23osti/87113.pdf' className="text-center font-semibold text-sm text-blue-500 underline">
-            Fonte: nrel.gov/docs</a>
+            <p className="text-center font-semibold text-sm text-blue-900 underline">Fonte: nrel.gov/docs</p>
           </div>
           )}
         </article>
@@ -105,8 +103,7 @@ export default function PaginaExterna(){
               estratégico das empresas, além de refletir em diversas vantagens para elas, para o meio ambiente e para o consumidor final. </p>
 
             <p className="text-justify text-gray-700"><strong>Para mais informações acesse o link abaixo</strong></p>
-            <a href='https://ieeexplore.ieee.org/document/8721134' className="text-center font-semibold text-sm text-blue-500 underline">
-                       Fonte: ieeexplore.ieee.org</a>
+            <p className="text-center font-semibold text-sm text-blue-900 underline">Fonte: ieeexplore.ieee.org</p>
             </div>
           )}
         </article>
