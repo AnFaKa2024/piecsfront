@@ -5,7 +5,7 @@ import { FaPaperPlane } from 'react-icons/fa'
 export default function Orcamento({ onSubmit, chatbotOpen }: OrcProps) {
   const [isChatOpen, setIsChatOpen] = useState(chatbotOpen || false)
 
-  const handleSubmit = (e)=> {e.preventDefault()
+  const handleSubmit = (e:  React.FormEvent<HTMLFormElement>)=> {e.preventDefault()
     if (onSubmit) {onSubmit()}}
 
   return (

@@ -1,3 +1,6 @@
+
+import {StaticImageData} from 'next/image';
+
 export type UserProps = {
   nome: string;
   senha:string;
@@ -8,14 +11,14 @@ export type MembroEquipe = {
   nome: string;
   turma: string;
   rm: string;
-  foto: any;
+  foto:  StaticImageData;
   github: string;
   linkedin: string;
 }
 
 
 export type OrcProps = {
-  onSubmit: string;
-  chatbotOpen: string;
+  onSubmit:()=>void;
+  chatbotOpen: boolean;
  
 }

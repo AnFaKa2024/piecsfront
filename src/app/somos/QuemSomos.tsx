@@ -59,7 +59,7 @@ function MembroCard({ nome, turma, rm, foto, github, linkedin }: MembroEquipe) {
   return (
     <div className="p-4 md:p-6 w-full max-w-sm mx-auto border border-linha rounded-xl shadow-md space-y-3 md:space-y-4">
       <div className="text-center">
-        <Image src={foto} alt={nome}className="w-32 md:w-auto"/>
+        <Image src={foto} alt={nome} className="w-32 md:w-auto"/>
       </div>
 
       <div className="text-center text-base md:text-xl">
