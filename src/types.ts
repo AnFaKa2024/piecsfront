@@ -22,3 +22,20 @@ export type OrcProps = {
   chatbotOpen: boolean;
  
 }
+
+export type PlanosProps = {
+  plano: string;
+}
+
+export type EdicaoProps = {
+  locacoes: string;
+  id: string;
+  nome: string;
+  email: string;
+}
+
+export type BeneficiarioProps = {
+  id: string;
+  nome: string;
+  email: string;
+}

@@ -1,0 +1,32 @@
+// const handleSubmit = async(e: FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault()
+  //   try{
+  //     const response = await fetch("/api/api", {
+  //       method: "POST",
+  //       headers: {"Content-Type": "application/json"},
+  //       body: JSON.stringify(dados),
+  //     })
+  //   }
+
+  //   if (response.ok){
+  //     const data = await response.json()
+  //     login(data.user)
+  //     setError(null)
+  //     router.push(data.user.redirectTo)
+  //   }else{
+  //     const erroData = await response.json()
+  //     setError(errorData.error)
+  //   }
+  //   }catch (err){
+  //     setError("Erro inesperado! Tente Novamente")
+  //     console.error(err)
+  //   }
+  // }
+
+    // Verifique o tipo de usuário antes de logar
+    // if (dados.tipo) {
+    //   login(dados);
+    //   setDados({ nome: '', senha: '', tipo: '' })
+    //     } else {
+    //   alert("Por favor, selecione o tipo de usuário.")
+    // }

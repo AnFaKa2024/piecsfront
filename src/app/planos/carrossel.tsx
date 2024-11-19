@@ -42,8 +42,8 @@ export default function Carrossel() {
     <main>
       
       {/* Seção de Texto */}
-      <section className="bg-claro p-8 text-center">
-        <h2 className="text-3xl font-bold text-padrao mb-6"> O que nossos clientes dizem </h2>
+      <section className="bg-faixa p-8 text-center">
+        <h2 className="text-3xl font-bold text-white mb-6"> O que nossos clientes dizem </h2>
         <div className="flex justify-center items-center space-x-4">
           
           {/* Ícone para ir ao texto anterior */}
