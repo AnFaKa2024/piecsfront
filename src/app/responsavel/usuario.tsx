@@ -156,17 +156,17 @@ export default function Usuario(){
   
             <div>
               <label htmlFor="ruaInstalacao" className="block text-lg font-medium mt-2">Rua</label>
-              <input type="text" id="ruaInstalacao" placeholder="Rua" className="w-96 p-2 border border-linha rounded-md" />
+              <input type="text" id="ruaInstalacao" placeholder="Rua" className="w-60 p-2 border border-linha rounded-md" />
             </div>
             
             <div>
               <label htmlFor="bairroInstalacao" className="block text-lg font-medium mt-2">Bairro</label>
-              <input type="text" id="bairroInstalacao" placeholder="Bairro" className="w-96 p-2 border border-linha rounded-md" />
+              <input type="text" id="bairroInstalacao" placeholder="Bairro" className="w-60 p-2 border border-linha rounded-md" />
             </div>
 
             <div>
               <label htmlFor="equipamento" className="block text-lg font-medium mt-2">Qual Equipamento mais Adequado?</label>
-                <select id="equipamento" className="w-96 p-2 border border-linha rounded-md" >
+                <select id="equipamento" className="w-60 p-2 border border-linha rounded-md" >
                   <option value="">Escolha uma das Opções</option>
                   <option value="solar">Placas Fotovoltaicas</option>
                   <option value="eolica">Eólica</option>
@@ -174,8 +174,8 @@ export default function Usuario(){
             </div>
             
             <div>
-              <label htmlFor="area" className="block text-lg font-medium mt-2">Qual a metragem da área disponível para a instalação?</label>
-              <input type="number" id="area" placeholder="Metragem da Área" className="w-96 p-2 border border-linha rounded-md" /> m²
+              <label htmlFor="area" className="block text-lg font-medium mt-2">Área disponível para a instalação?</label>
+              <input type="number" id="area" placeholder="Metragem da Área" className="w-44 p-2 border border-linha rounded-md" /> m²
             </div>
           
           </div>

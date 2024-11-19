@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import logo from "../image/logoSemFundo.png"
-import perfilEd2 from '../image/perfilEd2.png'
+import login from '../image/icone_cliente_branco2.png'
 import { FiLogOut } from 'react-icons/fi'
 
 export default function CabecalhoInicial(){
@@ -27,7 +27,7 @@ export default function CabecalhoInicial(){
 
             <Link href="/login">
               <div className="">
-                <Image src={perfilEd2} alt="perfilEditavel" className='w-20 h-20'/>
+                <Image src={login} alt="perfilEditavel" className='w-20 h-20'/>
               </div>
             </Link>
         

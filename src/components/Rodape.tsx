@@ -1,3 +1,6 @@
+import Link from "next/link"
+import { FiLogOut } from 'react-icons/fi'
+
 export default function Rodape(){
 
   return(
@@ -13,6 +16,7 @@ export default function Rodape(){
             </div>
         <p>&copy; {new Date().getFullYear()} PIECS. Todos os direitos reservados.</p>
         </div>
+        <Link href="/" aria-label="Sair" className="flex flex-col items-end text-claro text-xl hover:text-indigo-950"><FiLogOut />Sair do PIECS</Link>
       </div>
     </footer>
 

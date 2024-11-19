@@ -3,7 +3,7 @@ import { BeneficiarioProps, LocacaoProps } from "@/types";
 import { v4 as uuidv4 } from "uuid"
 import { AiOutlinePlusCircle, AiOutlineDelete, AiOutlineSave } from "react-icons/ai";
 
-export default function Edicao({nome, email, id}:BeneficiarioProps) {
+export default function Edicao() {
 
   const locacoes: LocacaoProps[] = [
     {id: uuidv4(), plano: "F-Básico", responsavel: "Mário Lima" },
@@ -15,10 +15,19 @@ export default function Edicao({nome, email, id}:BeneficiarioProps) {
   const [locacoesState, setLocacoes] = useState(locacoes);
   const [beneficiariosState, setBeneficiarios] = useState(beneficiario);
 
-  const adicionarBeneficiario = () => {
-    const novoId = uuidv4();
-    setBeneficiarios([...beneficiariosState, { id: novoId, nome: "", email: "" }]);
+  // ADICIONANDO/ EDITANDO BENEFICIÁRIO
+  const adicionarBeneficiario = async () => {
+    const novoBeneficiario = { id: uuidv4(), nome: "", email: "" };
+    const response = await fetch("/api/beneficiarios", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(novoBeneficiario),
+    });
+    if (response.ok) {
+      setBeneficiarios([...beneficiariosState, novoBeneficiario]);
+    }
   };
+  
 
   const editarBeneficiario = (id: string, campo:string, valor:string) => {
     if (campo === "email" && !/\S+@\S+\.\S+/.test(valor)) {
