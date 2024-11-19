@@ -1,14 +1,19 @@
 import { useState } from "react";
-import { BeneficiarioProps, EdicaoProps } from "@/types";
+import { BeneficiarioProps, LocacaoProps } from "@/types";
 import { v4 as uuidv4 } from "uuid"
 import { AiOutlinePlusCircle, AiOutlineDelete, AiOutlineSave } from "react-icons/ai";
 
 export default function Edicao({nome, email, id}:BeneficiarioProps) {
 
+  const locacoes: LocacaoProps[] = [
+    {id: uuidv4(), plano: "F-Básico", responsavel: "Mário Lima" },
+      ];
+  const beneficiario: BeneficiarioProps[] = [
+    {id: uuidv4(), nome: "Joana Lima", email: "Joana@gmail.com"}
+  ];
+
   const [locacoesState, setLocacoes] = useState(locacoes);
-
-  const [beneficiariosState, setBeneficiarios] = useState<Beneficiario[]>(beneficiario);
-
+  const [beneficiariosState, setBeneficiarios] = useState(beneficiario);
 
   const adicionarBeneficiario = () => {
     const novoId = uuidv4();
@@ -31,7 +36,6 @@ export default function Edicao({nome, email, id}:BeneficiarioProps) {
     setBeneficiarios(beneficiariosState.filter((beneficiario) => beneficiario.id !== id));
   }
 
- 
   const excluirLocacao = (id:string) => {
     setLocacoes(locacoesState.filter((locacao) => locacao.id !== id));
   }

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import logo from '../../image/logoSemFundo.png'
-import { FiLogIn, FiLogOut} from 'react-icons/fi'
+import { FiLogOut} from 'react-icons/fi'
 
 export default function CabecalhoEd(){
  

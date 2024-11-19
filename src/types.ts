@@ -27,11 +27,10 @@ export type PlanosProps = {
   plano: string;
 }
 
-export type EdicaoProps = {
-  locacoes: string;
+export type LocacaoProps = {
   id: string;
-  nome: string;
-  email: string;
+  plano: string;
+  responsavel: string;
 }
 
 export type BeneficiarioProps = {
