@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BeneficiarioProps, LocacaoProps } from "@/types";
 import { v4 as uuidv4 } from "uuid"
 import { AiOutlinePlusCircle, AiOutlineDelete, AiOutlineSave } from "react-icons/ai";
+
+
 
 export default function Edicao() {
 
@@ -14,6 +16,20 @@ export default function Edicao() {
 
   const [locacoesState, setLocacoes] = useState(locacoes);
   const [beneficiariosState, setBeneficiarios] = useState(beneficiario);
+
+  useEffect(() => {
+    const fetchBeneficiarios = async () => {
+      const response = await fetch("/api/beneficiarios");
+      if (response.ok) {
+        const data = await response.json();
+        setBeneficiarios(data);
+      } else {
+        console.error("Erro ao buscar beneficiários");
+      }
+    };
+
+    fetchBeneficiarios();
+  }, []);
 
   // ADICIONANDO/ EDITANDO BENEFICIÁRIO
   const adicionarBeneficiario = async () => {
@@ -41,8 +57,18 @@ export default function Edicao() {
     )
   }
 
-  const excluirBeneficiario = (id:string) => {
-    setBeneficiarios(beneficiariosState.filter((beneficiario) => beneficiario.id !== id));
+  const excluirBeneficiario = async (id:string) => {
+    try {
+      const res = await fetch(`/api/adm?id=${id}`, { method: 'DELETE' });
+      if (res.ok) {
+        setBeneficiarios((prev) => prev.filter((b) => b.id !== id));
+      } else {
+        const { message } = await res.json();
+        console.error("Erro ao excluir beneficiário:", message);
+      }
+    } catch (error) {
+      console.error("Erro na requisição DELETE:", error);
+    }
   }
 
   const excluirLocacao = (id:string) => {
