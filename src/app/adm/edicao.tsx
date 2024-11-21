@@ -7,72 +7,82 @@ import { AiOutlinePlusCircle, AiOutlineDelete, AiOutlineSave } from "react-icons
 
 export default function Edicao() {
 
-  const locacoes: LocacaoProps[] = [
-    {id: uuidv4(), plano: "F-Básico", responsavel: "Mário Lima" },
-      ];
-  const beneficiario: BeneficiarioProps[] = [
-    {id: uuidv4(), nome: "Joana Lima", email: "Joana@gmail.com"}
-  ];
+  const [locacoesState, setLocacoes] = useState<LocacaoProps[]>
+    ([{id: uuidv4(), plano: "F-Básico", responsavel: "Mário Lima" }])
+  
 
-  const [locacoesState, setLocacoes] = useState(locacoes);
-  const [beneficiariosState, setBeneficiarios] = useState(beneficiario);
+  const [beneficiariosState, setBeneficiarios] = useState<BeneficiarioProps[]>
+      ([{id: uuidv4(), nome: "Joana Lima", email: "Joana@gmail.com"}])
+
+ 
 
   useEffect(() => {
     const fetchBeneficiarios = async () => {
-      const response = await fetch("/api/beneficiarios");
-      if (response.ok) {
-        const data = await response.json();
-        setBeneficiarios(data);
-      } else {
-        console.error("Erro ao buscar beneficiários");
+      try {
+        const response = await fetch("/api/beneficiario");
+        if (response.ok) {
+          const data = await response.json()
+          setBeneficiarios(data)
+        } else {
+          console.error("Erro ao carregar beneficiário.")
+        }
+      } catch (error) {
+        console.error("Erro na requisição de beneficiario: ", error)
+        }
       }
-    };
+    fetchBeneficiarios()  
+  }, [])
+  
 
-    fetchBeneficiarios();
-  }, []);
 
   // ADICIONANDO/ EDITANDO BENEFICIÁRIO
   const adicionarBeneficiario = async () => {
     const novoBeneficiario = { id: uuidv4(), nome: "", email: "" };
-    const response = await fetch("/api/beneficiarios", {
+    try {
+      const response = await fetch("/api/beneficiario", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(novoBeneficiario),
     });
     if (response.ok) {
-      setBeneficiarios([...beneficiariosState, novoBeneficiario]);
-    }
-  };
+      setBeneficiarios((prev) => [...prev, novoBeneficiario]);
+      }
+    } catch (error) {
+      console.error("Erro ao adicionar beneficiario: ", error)
+    } 
+  }
   
 
   const editarBeneficiario = (id: string, campo:string, valor:string) => {
     if (campo === "email" && !/\S+@\S+\.\S+/.test(valor)) {
-        console.error("E-mail inválido");
-        return;
+      alert("E-mail inválido");
+      return;
     }
-    setBeneficiarios(
-      beneficiariosState.map((beneficiario) =>
+    setBeneficiarios((prev) => prev.map((beneficiario) =>
         beneficiario.id === id ? { ...beneficiario, [campo]: valor } : beneficiario
       )
     )
   }
 
+
   const excluirBeneficiario = async (id:string) => {
     try {
-      const res = await fetch(`/api/adm?id=${id}`, { method: 'DELETE' });
+      const res = await fetch(`/api/beneficiario?id=${id}`, 
+        { method: 'DELETE' })
+
       if (res.ok) {
         setBeneficiarios((prev) => prev.filter((b) => b.id !== id));
       } else {
         const { message } = await res.json();
-        console.error("Erro ao excluir beneficiário:", message);
+        console.error("Erro ao excluir beneficiário: ", message);
       }
     } catch (error) {
-      console.error("Erro na requisição DELETE:", error);
+      console.error("Erro na requisição DELETE: ", error);
     }
   }
 
   const excluirLocacao = (id:string) => {
-    setLocacoes(locacoesState.filter((locacao) => locacao.id !== id));
+    setLocacoes((prev) => prev.filter((locacao) => locacao.id !== id));
   }
 
   const salvarBeneficiarios = () => {
@@ -142,5 +152,5 @@ export default function Edicao() {
         </button>
       </section>
     </main>
-  );
+  )
 }
