@@ -1,0 +1,36 @@
+[
+  {"id": 1, "nome":  "Maria Clara Abreu" , "dataNascimento": "15-12-1994", "cpfCnpj":"098765431", "email":"mcabreu@gmail.com",
+   "senha": "mcabreu" , "confirma a senha": "mcabreu" ,"rua": "Acapulco" , "numero": "141" , "bairro": "Universitario" ,
+   "cep": "09876543" , "cidade": "Marilia" , "estado": "SP" , "kWh": "35" , "Qts Pessoas": "4" ,
+   "ruaInstalacao": "Acapulco" , "bairroInstalacao": "Universitario" , "equipamento": "Paineis" , "area": "100" ,
+   "senhaBeneficiario":"abreuben" ,"ConfirmeSenhaBeneficiario": "abreuben" },
+
+   { "id": 2, "nome": "João Pedro Santos", "dataNascimento": "22-03-1988", "cpfCnpj": "12345678901", "email": "joaops@gmail.com", 
+    "senha": "joaops1988", "confirma a senha": "joaops1988", "rua": "Amazonas", "numero": "512", "bairro": "Centro", "cep": "11020345", 
+    "cidade": "Santos", "estado": "SP", "kWh": "45", "Qts Pessoas": "3", "ruaInstalacao": "Amazonas", "bairroInstalacao": "Centro", 
+    "equipamento": "Inversor", "area": "80", "senhaBeneficiario": "santosbeneficio", "ConfirmeSenhaBeneficiario": "santosbeneficio"
+  },
+  
+  { "id": 3, "nome": "Ana Beatriz Oliveira", "dataNascimento": "10-09-1990", "cpfCnpj": "23456789012", "email": "anaoliveira@gmail.com", 
+    "senha": "anaoliveira", "confirma a senha": "anaoliveira", "rua": "Dom Bosco", "numero": "234", "bairro": "Jardim das Flores", 
+    "cep": "13456078", "cidade": "Campinas", "estado": "SP", "kWh": "50", "Qts Pessoas": "5", "ruaInstalacao": "Dom Bosco", 
+    "bairroInstalacao": "Jardim das Flores", "equipamento": "Painéis Solares", "area": "120", "senhaBeneficiario": "oliveiraben", 
+    "ConfirmeSenhaBeneficiario": "oliveiraben"
+  },
+  
+  { "id": 4, "nome": "Carlos Eduardo Lima", "dataNascimento": "08-11-1985", "cpfCnpj": "34567890123", "email": "carloslima@gmail.com", 
+    "senha": "carloslima85",  "confirma a senha": "carloslima85", "rua": "Rio Branco", "numero": "87", "bairro": "Vila Nova", 
+    "cep": "15456089", "cidade": "Bauru", "estado": "SP", "kWh": "38", "Qts Pessoas": "4", "ruaInstalacao": "Rio Branco", 
+    "bairroInstalacao": "Vila Nova", "equipamento": "Bateria Solar", "area": "90", "senhaBeneficiario": "limabenef", 
+    "ConfirmeSenhaBeneficiario": "limabenef"
+  },
+  
+  { "id": 5, "nome": "Gabriela Nunes", "dataNascimento": "30-05-1993", "cpfCnpj": "45678901234", 
+    "email": "gabriela.nunes@gmail.com", "senha": "gabynunes", "confirma a senha": "gabynunes", 
+    "rua": "Alameda das Rosas", "numero": "324", "bairro": "Parque Verde", "cep": "16245090", 
+    "cidade": "Ribeirão Preto", "estado": "SP", "kWh": "42", "Qts Pessoas": "2", "ruaInstalacao": "Alameda das Rosas", 
+    "bairroInstalacao": "Parque Verde", "equipamento": "Painéis Solares", "area": "110", "senhaBeneficiario": "nunesbenef", 
+    "ConfirmeSenhaBeneficiario": "nunesbenef"
+  }
+  
+]

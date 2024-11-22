@@ -30,10 +30,10 @@ export default function Usuario(){
   const handleSave = () => {
     // Obtém os valores do formulário
     const dadosResponsavel = {
-      nome: document.getElementById("nome")?.value,
-      dataNascimento: document.getElementById("dataNascimento")?. value,
-      cpfCnpj: document.getElementById("cpfCnpj")?.value,
-      email: document.getElementById("email")?.value,
+      nome: (document.getElementById("nome") as HTMLInputElement)?.value || "",
+      dataNascimento: (document.getElementById("dataNascimento") as HTMLInputElement)?. value || "",
+      cpfCnpj: (document.getElementById("cpfCnpj") as HTMLInputElement)?.value || "",
+      email: (document.getElementById("email") as HTMLInputElement)?.value || "",
     };
 
     // Cria um alerta de confirmação

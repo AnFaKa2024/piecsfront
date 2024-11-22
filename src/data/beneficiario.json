@@ -1,0 +1,10 @@
+[
+  {"id": 1 , "nome": "Joaquina Flamengo" , "email":"joafla@bol.com.br"},
+  {"id": 2, "nome": "Carlos Santana", "email": "carlos.santana@gmail.com"},
+  {"id": 3, "nome": "Maria Oliveira", "email": "maria.oliveira@yahoo.com"},
+  {"id": 4, "nome": "Pedro Silva", "email": "pedro.silva@hotmail.com"},
+  {"id": 5, "nome": "Ana Paula Lima", "email": "ana.paula@outlook.com"},
+  {"id": 6, "nome": "Ricardo Mendes", "email": "ricardo.mendes@uol.com.br"},
+  {"id": 7, "nome": "Fernanda Costa", "email": "fernanda.costa@terra.com.br"}
+
+]
