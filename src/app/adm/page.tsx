@@ -2,14 +2,14 @@
 
 
 import CabecalhoEd from "./CabecalhoEd";
-import Edicao from "./edicao";
+import Beneficiario from "./Beneficiario";
 
 export default function Adm(){
 
   return(
     <>
     <CabecalhoEd/>
-    <Edicao/>
+    <Beneficiario/>
     </>
   )
 }

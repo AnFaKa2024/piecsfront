@@ -15,7 +15,11 @@ import Link from 'next/link'
 export default function Assinaturas() {
 
   const handleSelection = (plano:string) => {
-    console.log("Plano Selecionado:", plano)
+    const confirmed = window.confirm(`Você selecionou o plano: ${plano}. Deseja confirmar?`);
+    if (confirmed) {
+      localStorage.setItem("selectedPlan", plano); // Salva o plano no localStorage
+      window.location.href = "/responsavel"; // Redireciona para a próxima página
+    }
   }
 
   return (
@@ -71,7 +75,7 @@ export default function Assinaturas() {
                     <td className="border border-linha px-4 py-2">R$ 10.500,00</td>
                     <td className="border border-linha px-4 py-2"> 
                     <Link href='/responsavel'>
-                      <button onClick={()=> handleSelection('Plano F-Básico')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
+                      <button onClick={()=> handleSelection('Plano F-Básico de 5 Painéis de 510Wp')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
                         <FaCheckCircle className="text-xl" /> Selecionar 
                       </button>
                     </Link>
@@ -91,7 +95,7 @@ export default function Assinaturas() {
                     <td className="border border-linha px-4 py-2">R$ 12.000,00</td>
                     <td className="border border-linha px-4 py-2"> 
                       <Link href='/responsavel'>
-                        <button onClick={() => handleSelection('Plano F-Intermediário')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300" >
+                        <button onClick={() => handleSelection('Plano F-Intermediário de 5 Painéis de 550Wp')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300" >
                         <FaCheckCircle className="text-xl" /> Selecionar
                         </button>
                       </Link>
@@ -110,7 +114,7 @@ export default function Assinaturas() {
                     <td className="border border-linha px-4 py-2">R$ 13.500,00</td>
                     <td className="border border-linha px-4 py-2"> 
                     <Link href='/responsavel'>
-                      <button onClick={() => handleSelection('Plano F-Intermediário')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300" >
+                      <button onClick={() => handleSelection('Plano F-Intermediário de 5 Painéis de 590Wp')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300" >
                         <FaCheckCircle className="text-xl" /> Selecionar
                       </button>
                     </Link>
@@ -161,7 +165,7 @@ export default function Assinaturas() {
                     <td className="border border-linha px-4 py-2">10 anos</td>
                     <td className="border border-linha px-4 py-2">
                     <Link href='/responsavel'>
-                      <button onClick={()=> handleSelection('Plano E-Básico')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
+                      <button onClick={()=> handleSelection('Plano E-Básico de 2 Turbinas de 3kW')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
                         <FaCheckCircle className="text-xl" /> Selecionar
                       </button>
                     </Link>
@@ -179,7 +183,7 @@ export default function Assinaturas() {
                     <td className="border border-linha px-4 py-2">9 anos e 4 meses</td>
                     <td className="border border-linha px-4 py-2">
                     <Link href='/responsavel'>
-                      <button onClick={()=> handleSelection('Plano E-Intermediário')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
+                      <button onClick={()=> handleSelection('Plano E-Intermediário de 2 Turbinas de 5kW')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
                         <FaCheckCircle className="text-xl" /> Selecionar
                       </button>
                     </Link>
@@ -197,7 +201,7 @@ export default function Assinaturas() {
                     <td className="border border-linha px-4 py-2">9 anos e 5 meses</td>
                     <td className="border border-linha px-4 py-2">
                     <Link href='/responsavel'>
-                      <button onClick={()=> handleSelection('Plano E-Avançado')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
+                      <button onClick={()=> handleSelection('Plano E-Avançado de 2 Turbinas de 10kW')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
                         <FaCheckCircle className="text-xl" /> Selecionar
                       </button>
                     </Link>
@@ -240,7 +244,7 @@ export default function Assinaturas() {
                 </td>
                 <td className="border border-linha px-4 py-2">
                   <Link href='/responsavel'>
-                    <button onClick={()=> handleSelection('Plano B-Básico')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
+                    <button onClick={()=> handleSelection('Plano Bateria Residencial e Pequenos Negócios de 5KWh')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
                       <FaCheckCircle className="text-xl" /> Selecionar
                     </button>
                   </Link>
@@ -258,7 +262,7 @@ export default function Assinaturas() {
                 </td>
                 <td className="border border-linha px-4 py-2">
                   <Link href='/responsavel'>
-                    <button onClick={()=> handleSelection('Plano B-Básico2')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
+                    <button onClick={()=> handleSelection('Plano Bateria Médio Porte de 10kWH')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
                       <FaCheckCircle className="text-xl" /> Selecionar
                     </button>
                   </Link>
@@ -276,7 +280,7 @@ export default function Assinaturas() {
                 </td>
                 <td className="border border-linha px-4 py-2">
                   <Link href='/responsavel'>
-                    <button onClick={()=> handleSelection('Plano B-Intermediario')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
+                    <button onClick={()=> handleSelection('Plano Bateria Comercial de 20kWh')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
                       <FaCheckCircle className="text-xl" /> Selecionar
                     </button>
                   </Link>
@@ -294,7 +298,7 @@ export default function Assinaturas() {
                 </td>
                 <td className="border border-linha px-4 py-2">
                   <Link href='/responsavel'>
-                    <button onClick={()=> handleSelection('Plano B-Avançado')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
+                    <button onClick={()=> handleSelection('Plano Bateria Industrial e Propriedades Rurais de 50kWh')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
                       <FaCheckCircle className="text-xl" /> Selecionar
                     </button>
                   </Link>
@@ -324,9 +328,11 @@ export default function Assinaturas() {
                 <li>Valor Anual de Locação (com desconto de 10%): R$ 12.960,00.</li>
               </ul>
               <Link href='/responsavel'>
-                  <button onClick={()=> handleSelection('Plano Básico')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
+                <div className="flex flex-col justify-end items-center min-h-scren">
+                  <button onClick={()=> handleSelection('Combo Residencial - 10 painíes fotovoltaicos e 1 bateria de 5kWh')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
                     <FaCheckCircle className="text-xl" /> Selecionar
                   </button>
+                </div>
                 </Link>
             </div>
 
@@ -340,9 +346,11 @@ export default function Assinaturas() {
                 <li>Valor Anual de Locação (com desconto de 15%): R$ 35.700,00.</li>
               </ul>
               <Link href='/responsavel'>
-                <button onClick={()=> handleSelection('Plano Básico')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
+              <div className="flex flex-col justify-end items-center min-h-scren mt-5">
+                <button onClick={()=> handleSelection('Combo Comercial - 1 Turbina eólica, 20 painíes fotovoltaicos e 1 bateria de 20kWh')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
                   <FaCheckCircle className="text-xl" /> Selecionar
                 </button>
+              </div>
               </Link>
             </div>
 
@@ -356,9 +364,11 @@ export default function Assinaturas() {
                 <li>Valor Anual de Locação (com desconto de 20%): R$ 115.200,00.</li>
               </ul>
               <Link href='/responsavel'>
-                <button onClick={()=> handleSelection('Plano Básico')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
+              <div className="flex flex-col justify-end items-center min-h-scren">
+                <button onClick={()=> handleSelection('Combo Completo - 1 Turbina eólica, 50 painíes fotovoltaicos e 2 baterias de 50kWh')}  className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-green-700 transition duration-300">
                   <FaCheckCircle className="text-xl" /> Selecionar
                 </button>
+              </div>
               </Link>
             </div>
           </div>

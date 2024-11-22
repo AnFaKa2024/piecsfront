@@ -1,18 +1,60 @@
 // cadastro do usuário - responável pela microregiao
-import { useState} from 'react'
-import { AiOutlinePlusCircle } from 'react-icons/ai'
+import { useState, useEffect} from 'react'
+import { AiOutlinePlusCircle, AiOutlineSave } from 'react-icons/ai'
 
 
 export default function Usuario(){
 
+  const [selectedPlano, setSelectedPlano] = useState<string>("");
+  
+  const [showPassword] = useState(false);
 
-  const [beneficiarios, setBeneficiarios] = useState([{nome:'', email:''}])
+ const [beneficiarios, setBeneficiarios] = useState([{nome:'', email:''}])
+  
   const adicionarBeneficiario = ()=>{
     setBeneficiarios([...beneficiarios,{nome:'', email:''}])
   }
   
+    
+  useEffect(() => {
+    // faz com que seja executado apenas no lado do cliente
+    if (typeof window !== "undefined"){
+      const plano = localStorage.getItem("selectedPlano");
+      if (plano) {
+        setSelectedPlano(plano);
+      }
+    }
+  }, [])
 
-  const [showPassword] = useState(false);
+  
+  const handleSave = () => {
+    // Obtém os valores do formulário
+    const dadosResponsavel = {
+      nome: document.getElementById("nome")?.value,
+      dataNascimento: document.getElementById("dataNascimento")?. value,
+      cpfCnpj: document.getElementById("cpfCnpj")?.value,
+      email: document.getElementById("email")?.value,
+    };
+
+    // Cria um alerta de confirmação
+    const confirmacao = window.confirm(
+      `Confirme os dados inseridos:\n
+      Nome: ${dadosResponsavel.nome}\n
+      Data de Nascimento: ${dadosResponsavel.dataNascimento}\n
+      CPF/CNPJ: ${dadosResponsavel.cpfCnpj}\n
+      Email: ${dadosResponsavel.email}\n
+      Deseja salvar essas informações?`
+    );
+
+    if (confirmacao) {
+      // Lógica para salvar os dados (mock)
+      console.log("Dados salvos com sucesso!", {
+        responsavel: dadosResponsavel,
+        beneficiarios,
+      });
+      alert("Cadastro salvo com sucesso!");
+    }
+  }
 
 
   return(
@@ -20,6 +62,14 @@ export default function Usuario(){
     <h1 className="text-center text-5xl font-bold mt-7">
       CADASTRAR NOVA MICROREGIÃO DE ENERGIA
     </h1>
+
+      {selectedPlano && (
+        <p className="text-lg mt-10 p-4">
+          Você selecionou o <strong>{selectedPlano}</strong>.
+        </p>
+      )}
+
+
     <p className="mt-8 text-center text-3xl">
       Este cadastro é referente à região que a microregião de energia irá abastecer. 
       Apenas o responsável terá acesso.
@@ -215,20 +265,26 @@ export default function Usuario(){
                 <p className='text-center text-xl text-red-600 font-semibold gap-5'>A SENHA CRIADA SERÁ A MESMA PARA TODOS OS BENEFICIÁRIOS CADASTRADOS!!</p>
               <div className="grid grid-cols-2 text-center gap-4 mt-4">
                 <div>
-                  <label htmlFor="senha" className="block text-lg font-medium mt-2">Crie a Senha (8 caracteres)</label>
-                  <input type={showPassword ? 'text' : 'password'} id="senha" placeholder="Crie a Senha" className="w-96 p-2 border border-linha rounded-md" />
+                  <label htmlFor="senhaBeneficiario" className="block text-lg font-medium mt-2">Crie a Senha (8 caracteres)</label>
+                  <input type={showPassword ? 'text' : 'password'} id="senhaBeneficiario" placeholder="Crie a Senha" className="w-96 p-2 border border-linha rounded-md" />
                 </div>
                 
 
                 <div>
-                  <label htmlFor="Confirme a senha" className="block text-lg font-medium mt-2">Confrime a senha (8 caracteres)</label>
-                  <input type={showPassword ? 'text' : 'password'} id="Confirme a senha" placeholder="Confirme a senha" className="w-96 p-2 border border-linha rounded-md" />
+                  <label htmlFor="ConfirmeSenhaBeneficiario" className="block text-lg font-medium mt-2">Confrime a senha (8 caracteres)</label>
+                  <input type={showPassword ? 'text' : 'password'} id="ConfirmeSenhaBeneficiario" placeholder="Confirme a senha" className="w-96 p-2 border border-linha rounded-md" />
                 </div>
               </div>
             
         </fieldset>
 
       </form>
+       {/* Botão para salvar informações */}
+       <div className="flex justify-center mt-8">
+          <button onClick={handleSave} className="flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition duration-300" >
+            <AiOutlineSave size={24} /> Salvar Informações
+          </button>
+        </div>
     </section>
   </main>
   )
