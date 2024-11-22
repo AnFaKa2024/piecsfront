@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { BeneficiarioProps, LocacaoProps } from "@/types";
+import { useState} from "react";
+import { LocacaoProps } from "@/types";
 import { v4 as uuidv4 } from "uuid"
 import { AiOutlinePlusCircle, AiOutlineDelete, AiOutlineSave, AiOutlineEye } from "react-icons/ai";
 
