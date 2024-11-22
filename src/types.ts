@@ -33,8 +33,3 @@ export type LocacaoProps = {
   responsavel: string;
 }
 
-export type BeneficiarioProps = {
-  id: string;
-  nome: string;
-  email: string;
-}
